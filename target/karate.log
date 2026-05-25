@@ -1,0 +1,222 @@
+22:05:11.361 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+22:05:12.596 [main] INFO  com.intuit.karate - karate.env system property was: null 
+22:05:12.920 [main] DEBUG com.intuit.karate - request:
+1 > GET http://localhost:8000/api/usuarios
+1 > Host: localhost:8000
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+1 > Accept-Encoding: gzip,deflate
+
+
+22:05:12.956 [main] DEBUG com.intuit.karate - response time in milliseconds: 33
+1 < 200
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 963
+1 < ETag: W/"3c3-OQL7kS2xOyLfMaKaJ4+b1CBus0I"
+1 < Date: Mon, 25 May 2026 03:05:12 GMT
+1 < Connection: keep-alive
+1 < Keep-Alive: timeout=5
+{"ok":true,"data":[{"id":7,"nombres":"andres","apellidos":"gonzalez","correo":"afgc@hotmail.com","telefonos":321,"celular":654,"direccion":"cll 555","ciudad":"jamundi"},{"id":10,"nombres":"juan felipe","apellidos":"gomez","correo":"juangomez@test.com","telefonos":45445545,"celular":332323223,"direccion":"calle 4","ciudad":"medellin"},{"id":11,"nombres":"Diego","apellidos":"Palacios","correo":"diego@test.com","telefonos":1234567,"celular":2147483647,"direccion":"Calle 123","ciudad":"Cali"},{"id":12,"nombres":"Diego","apellidos":"Palacios","correo":"diego@test.com","telefonos":1234567,"celular":2147483647,"direccion":"Calle 123","ciudad":"Cali"},{"id":14,"nombres":"Juan","apellidos":"Perez","correo":"juan@test.com","telefonos":123456,"celular":2147483647,"direccion":"Calle 123","ciudad":"Cali"},{"id":15,"nombres":"Juan Actualizado","apellidos":"Test","correo":"temporal@test.com","telefonos":111,"celular":222,"direccion":"Temporal","ciudad":"Bogota"}]}
+
+22:05:13.036 [main] INFO  com.intuit.karate - karate.env system property was: null 
+22:05:13.041 [main] DEBUG com.intuit.karate - request:
+1 > GET http://localhost:8000/api/usuarios/999999
+1 > Host: localhost:8000
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+1 > Accept-Encoding: gzip,deflate
+
+
+22:05:13.048 [main] DEBUG com.intuit.karate - response time in milliseconds: 6
+1 < 404
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 41
+1 < ETag: W/"29-CoelXNqSv3nH5zbFHKbuPpAPi9U"
+1 < Date: Mon, 25 May 2026 03:05:13 GMT
+1 < Connection: keep-alive
+1 < Keep-Alive: timeout=5
+{"ok":false,"msg":"El usuario no existe"}
+
+22:05:13.060 [main] INFO  com.intuit.karate - karate.env system property was: null 
+22:05:13.114 [main] DEBUG com.intuit.karate - request:
+1 > POST http://localhost:8000/api/usuarios
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 143
+1 > Host: localhost:8000
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+1 > Accept-Encoding: gzip,deflate
+{"nombres":"Juan","apellidos":"Perez","correo":"juan@test.com","telefonos":123456,"celular":3001234567,"direccion":"Calle 123","ciudad":"Cali"}
+
+22:05:13.126 [main] DEBUG com.intuit.karate - response time in milliseconds: 11
+1 < 201
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 207
+1 < ETag: W/"cf-Xq2U4212dIykh9QMRjVcDRlEA9Q"
+1 < Date: Mon, 25 May 2026 03:05:13 GMT
+1 < Connection: keep-alive
+1 < Keep-Alive: timeout=5
+{"ok":true,"msg":"Usuario creado correctamente","data":{"id":17,"nombres":"Juan","apellidos":"Perez","correo":"juan@test.com","telefonos":123456,"celular":3001234567,"direccion":"Calle 123","ciudad":"Cali"}}
+
+22:05:13.145 [main] INFO  com.intuit.karate - karate.env system property was: null 
+22:05:13.152 [main] DEBUG com.intuit.karate - request:
+1 > POST http://localhost:8000/api/usuarios
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 26
+1 > Host: localhost:8000
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+1 > Accept-Encoding: gzip,deflate
+{"nombres":"","correo":""}
+
+22:05:13.155 [main] DEBUG com.intuit.karate - response time in milliseconds: 3
+1 < 400
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 47
+1 < ETag: W/"2f-ImXK6EN7MBWNaBJTPUGuaIV8l4c"
+1 < Date: Mon, 25 May 2026 03:05:13 GMT
+1 < Connection: keep-alive
+1 < Keep-Alive: timeout=5
+{"ok":false,"msg":"Faltan campos obligatorios"}
+
+22:05:13.166 [main] INFO  com.intuit.karate - karate.env system property was: null 
+22:05:13.170 [main] DEBUG com.intuit.karate - request:
+1 > POST http://localhost:8000/api/usuarios
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 139
+1 > Host: localhost:8000
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+1 > Accept-Encoding: gzip,deflate
+{"nombres":"Temporal","apellidos":"Test","correo":"temporal@test.com","telefonos":111,"celular":222,"direccion":"Temporal","ciudad":"Cali"}
+
+22:05:13.177 [main] DEBUG com.intuit.karate - response time in milliseconds: 5
+1 < 201
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 203
+1 < ETag: W/"cb-jhk7KBF9YgtnxEK+oFNpier7aew"
+1 < Date: Mon, 25 May 2026 03:05:13 GMT
+1 < Connection: keep-alive
+1 < Keep-Alive: timeout=5
+{"ok":true,"msg":"Usuario creado correctamente","data":{"id":18,"nombres":"Temporal","apellidos":"Test","correo":"temporal@test.com","telefonos":111,"celular":222,"direccion":"Temporal","ciudad":"Cali"}}
+
+22:05:13.201 [main] DEBUG com.intuit.karate - request:
+2 > PUT http://localhost:8000/api/usuarios/18
+2 > Content-Type: application/json; charset=UTF-8
+2 > Content-Length: 48
+2 > Host: localhost:8000
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+2 > Accept-Encoding: gzip,deflate
+{"nombres":"Juan Actualizado","ciudad":"Bogota"}
+
+22:05:13.211 [main] DEBUG com.intuit.karate - response time in milliseconds: 9
+2 < 200
+2 < X-Powered-By: Express
+2 < Access-Control-Allow-Origin: *
+2 < Content-Type: application/json; charset=utf-8
+2 < Content-Length: 218
+2 < ETag: W/"da-3eElnoJXV4/rg4AhnJssB/52AsI"
+2 < Date: Mon, 25 May 2026 03:05:13 GMT
+2 < Connection: keep-alive
+2 < Keep-Alive: timeout=5
+{"ok":true,"msg":"Usuario actualizado correctamente","data":{"id":18,"nombres":"Juan Actualizado","apellidos":"Test","correo":"temporal@test.com","telefonos":111,"celular":222,"direccion":"Temporal","ciudad":"Bogota"}}
+
+22:05:13.222 [main] INFO  com.intuit.karate - karate.env system property was: null 
+22:05:13.226 [main] DEBUG com.intuit.karate - request:
+1 > PUT http://localhost:8000/api/usuarios/999999
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 23
+1 > Host: localhost:8000
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+1 > Accept-Encoding: gzip,deflate
+{"nombres":"No Existe"}
+
+22:05:13.235 [main] DEBUG com.intuit.karate - response time in milliseconds: 8
+1 < 404
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 41
+1 < ETag: W/"29-CoelXNqSv3nH5zbFHKbuPpAPi9U"
+1 < Date: Mon, 25 May 2026 03:05:13 GMT
+1 < Connection: keep-alive
+1 < Keep-Alive: timeout=5
+{"ok":false,"msg":"El usuario no existe"}
+
+22:05:13.245 [main] INFO  com.intuit.karate - karate.env system property was: null 
+22:05:13.250 [main] DEBUG com.intuit.karate - request:
+1 > POST http://localhost:8000/api/usuarios
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 139
+1 > Host: localhost:8000
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+1 > Accept-Encoding: gzip,deflate
+{"nombres":"Eliminar","apellidos":"Test","correo":"eliminar@test.com","telefonos":111,"celular":222,"direccion":"Temporal","ciudad":"Cali"}
+
+22:05:13.258 [main] DEBUG com.intuit.karate - response time in milliseconds: 7
+1 < 201
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 203
+1 < ETag: W/"cb-3xbuZACnXlNWVpLVMeYglQVKCIQ"
+1 < Date: Mon, 25 May 2026 03:05:13 GMT
+1 < Connection: keep-alive
+1 < Keep-Alive: timeout=5
+{"ok":true,"msg":"Usuario creado correctamente","data":{"id":19,"nombres":"Eliminar","apellidos":"Test","correo":"eliminar@test.com","telefonos":111,"celular":222,"direccion":"Temporal","ciudad":"Cali"}}
+
+22:05:13.264 [main] DEBUG com.intuit.karate - request:
+2 > DELETE http://localhost:8000/api/usuarios/19
+2 > Host: localhost:8000
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+2 > Accept-Encoding: gzip,deflate
+
+
+22:05:13.273 [main] DEBUG com.intuit.karate - response time in milliseconds: 9
+2 < 200
+2 < X-Powered-By: Express
+2 < Access-Control-Allow-Origin: *
+2 < Content-Type: application/json; charset=utf-8
+2 < Content-Length: 51
+2 < ETag: W/"33-lRDVs6hMLIv4gdzYxO44vvpnWLo"
+2 < Date: Mon, 25 May 2026 03:05:13 GMT
+2 < Connection: keep-alive
+2 < Keep-Alive: timeout=5
+{"ok":true,"msg":"Usuario eliminado correctamente"}
+
+22:05:13.283 [main] INFO  com.intuit.karate - karate.env system property was: null 
+22:05:13.287 [main] DEBUG com.intuit.karate - request:
+1 > DELETE http://localhost:8000/api/usuarios/999999
+1 > Host: localhost:8000
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+1 > Accept-Encoding: gzip,deflate
+
+
+22:05:13.292 [main] DEBUG com.intuit.karate - response time in milliseconds: 4
+1 < 404
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 41
+1 < ETag: W/"29-CoelXNqSv3nH5zbFHKbuPpAPi9U"
+1 < Date: Mon, 25 May 2026 03:05:13 GMT
+1 < Connection: keep-alive
+1 < Keep-Alive: timeout=5
+{"ok":false,"msg":"El usuario no existe"}
+
+22:05:14.214 [main] INFO  com.intuit.karate.Suite - <<pass>> feature 1 of 1 (0 remaining) classpath:examples/users/users.feature
